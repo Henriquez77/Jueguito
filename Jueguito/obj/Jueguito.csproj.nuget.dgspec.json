@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MINEDUCYT\\source\\repos\\Jueguito\\Jueguito\\Jueguito.csproj": {}
+    "C:\\Users\\MINEDUCYT\\Downloads\\Jueguito\\Jueguito\\Jueguito.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MINEDUCYT\\source\\repos\\Jueguito\\Jueguito\\Jueguito.csproj": {
+    "C:\\Users\\MINEDUCYT\\Downloads\\Jueguito\\Jueguito\\Jueguito.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MINEDUCYT\\source\\repos\\Jueguito\\Jueguito\\Jueguito.csproj",
+        "projectUniqueName": "C:\\Users\\MINEDUCYT\\Downloads\\Jueguito\\Jueguito\\Jueguito.csproj",
         "projectName": "Jueguito",
-        "projectPath": "C:\\Users\\MINEDUCYT\\source\\repos\\Jueguito\\Jueguito\\Jueguito.csproj",
+        "projectPath": "C:\\Users\\MINEDUCYT\\Downloads\\Jueguito\\Jueguito\\Jueguito.csproj",
         "packagesPath": "C:\\Users\\MINEDUCYT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MINEDUCYT\\source\\repos\\Jueguito\\Jueguito\\obj\\",
+        "outputPath": "C:\\Users\\MINEDUCYT\\Downloads\\Jueguito\\Jueguito\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MINEDUCYT\\AppData\\Roaming\\NuGet\\NuGet.Config",

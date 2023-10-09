@@ -13,7 +13,7 @@ namespace Jueguito
     public partial class Juego : Form
     {
         Random rnd = new Random();
-        int puntaje = 0, tiempo = 30;
+        int puntaje = 0, tiempo = 30, jugador = 1;
         public Juego()
         {
             InitializeComponent();
@@ -103,6 +103,11 @@ namespace Jueguito
         {
             timer1.Start();
         }
+        public void TimesUp(int puntuacion, int numerojugador)
+        {
+            MessageBox.Show($"¡El tiempo se ha acabado! Jugador{numerojugador} su puntuacion es: {puntuacion}");
+            jugador += 1;
+        }
         private void Tiempo()
         {
             tiempo -= 1;
@@ -111,6 +116,7 @@ namespace Jueguito
             {
                 timer1.Stop();
                 OcultarPictureBoxes();
+                TimesUp(puntaje,jugador);
             }
         }
         private void OcultarPictureBoxes()
