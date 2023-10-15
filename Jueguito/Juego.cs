@@ -13,7 +13,7 @@ namespace Jueguito
     public partial class Juego : Form
     {
         Random rnd = new Random();
-        int puntaje = 0, tiempo = 30, jugador = 1;
+        int puntaje = 0, tiempo = 30, jugador = 0;
         public Juego()
         {
             InitializeComponent();
@@ -66,7 +66,7 @@ namespace Jueguito
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
             OcultarPictureBoxes();
             //List<PictureBox> pictureBoxesAMostrar = new List<PictureBox>();
             List<PictureBox> pictureBoxes = new List<PictureBox>
@@ -94,7 +94,7 @@ namespace Jueguito
             //}
             foreach (PictureBox pb in pictureBoxes)
             {
-                Cambiar(pb, pictureBoxes, 170, 20, 40, 70);
+                Cambiar(pb, pictureBoxes, 200, 20, 40, 70);
             }
             Tiempo();
         }
@@ -102,21 +102,29 @@ namespace Jueguito
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            jugador += 1;
+            label7.Text = $"Jugador #{jugador}";
+            tiempo = 30;
+            puntaje = 0;
         }
         public void TimesUp(int puntuacion, int numerojugador)
         {
             MessageBox.Show($"¡El tiempo se ha acabado! Jugador{numerojugador} su puntuacion es: {puntuacion}");
-            jugador += 1;
+            listBox1.Items.Add($"Jugador #{numerojugador} {puntuacion} pts.");
+            label4.Text = "0";
+            label5.Text = "0";
+            label7.Text = "";
         }
         private void Tiempo()
         {
             tiempo -= 1;
             label4.Text = tiempo.ToString();
-            if(tiempo == 0)
+            if (tiempo == 0)
             {
                 timer1.Stop();
                 OcultarPictureBoxes();
-                TimesUp(puntaje,jugador);
+                TimesUp(puntaje, jugador);
+                
             }
         }
         private void OcultarPictureBoxes()
@@ -133,12 +141,15 @@ namespace Jueguito
         {
             OcultarPictureBoxes();
             label4.Text = tiempo.ToString();
+
+
+
         }
         private void SumarPuntaje()
         {
             puntaje += 1;
             label5.Text = puntaje.ToString();
-         
+
         }
 
         private void Juego_Click(object sender, EventArgs e)
@@ -175,5 +186,29 @@ namespace Jueguito
         {
             SumarPuntaje();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void reiniciar()
+        {
+            tiempo = 30;
+            puntaje = 0;
+            label4.Text = "0";
+            label5.Text = "0";
+            label7.Text = "";
+            OcultarPictureBoxes();
+            timer1.Stop();
+            jugador = 0;
+            listBox1.Items.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            reiniciar();
+        }
     }
+
+
 }

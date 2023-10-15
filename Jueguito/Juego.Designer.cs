@@ -45,6 +45,7 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -73,7 +74,7 @@
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(12, 42);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(133, 394);
+            listBox1.Size = new Size(157, 394);
             listBox1.TabIndex = 4;
             // 
             // label1
@@ -89,7 +90,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(152, 413);
+            button1.Location = new Point(175, 413);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 6;
@@ -99,12 +100,13 @@
             // 
             // button2
             // 
-            button2.Location = new Point(233, 413);
+            button2.Location = new Point(256, 413);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 7;
             button2.Text = "Reiniciar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
@@ -188,7 +190,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(314, 410);
+            label3.Location = new Point(337, 410);
             label3.Name = "label3";
             label3.Size = new Size(79, 25);
             label3.TabIndex = 14;
@@ -199,7 +201,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(396, 410);
+            label4.Location = new Point(419, 410);
             label4.Name = "label4";
             label4.Size = new Size(23, 25);
             label4.TabIndex = 15;
@@ -210,7 +212,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(514, 409);
+            label5.Location = new Point(537, 409);
             label5.Name = "label5";
             label5.Size = new Size(23, 25);
             label5.TabIndex = 17;
@@ -221,11 +223,22 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(431, 409);
+            label6.Location = new Point(454, 409);
             label6.Name = "label6";
             label6.Size = new Size(80, 25);
             label6.TabIndex = 16;
             label6.Text = "Puntaje";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(172, 15);
+            label7.Name = "label7";
+            label7.Size = new Size(86, 25);
+            label7.TabIndex = 18;
+            label7.Text = "Jugador";
             // 
             // Juego
             // 
@@ -233,6 +246,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Green;
             ClientSize = new Size(800, 450);
+            Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(label6);
             Controls.Add(label4);
@@ -282,5 +296,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Label label7;
     }
 }
